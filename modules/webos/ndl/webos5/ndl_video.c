@@ -11,10 +11,10 @@ static bool GetCapabilities(SS4S_VideoCapabilities *capabilities) {
     capabilities->codecs = SS4S_VIDEO_H264 | SS4S_VIDEO_H265 | SS4S_VIDEO_VP9 | SS4S_VIDEO_AV1;
     capabilities->transform = SS4S_VIDEO_CAP_TRANSFORM_UI_COMPOSITING;
     if (SS4S_webOS_Is_HighEnd_SoC()) {
-        capabilities->maxBitrate = 95000;
+        capabilities->maxBitrate = 150000; // fix Javier Alfaro
         capabilities->suggestedBitrate = 45000;
     } else {
-        capabilities->maxBitrate = 65000;
+        capabilities->maxBitrate = 150000; // fix Javier Alfaro
         capabilities->suggestedBitrate = 35000;
     }
     capabilities->hdr = true;
